@@ -1,0 +1,6 @@
+# bat/ps1/sql/txt must not be converted (CRLF, sql is UTF-8)
+*.bat -text
+*.ps1 -text
+*.sql -text
+*.txt -text
+*.sqlite3 binary

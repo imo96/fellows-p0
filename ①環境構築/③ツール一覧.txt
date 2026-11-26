@@ -1,0 +1,13 @@
+#講義で使用するソフト
+
+①Python 3.12.10(VSCode で使用。データベースの SQLite は Python に組み込み済み。公式サイトから取得。setup.bat は自動で取得する)
+	python-3.12.10-amd64.exe
+	https://www.python.org/downloads/release/python-31210/
+	https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe
+
+②Visual Studio Code
+	VSCodeSetup-x64-バージョン.exe（System Installer・全ユーザー版。公式サイトの最新版。setup.bat は最新版を自動で取得する）
+	https://code.visualstudio.com/download
+
+【注意】インストール先のパスに注意：Windowsのユーザー名に日本語（全角文字）が含まれている場合や、フォルダパスにスペース・特殊文字があるとトラブルが発生しやすい
+

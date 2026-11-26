@@ -1,0 +1,39 @@
+１．資材をインストール
+	[③ツール一覧.txt]にある資材をインストールします
+	※ setup.bat で以下を一括インストールできます(使い方は「②一括セットアップの使い方.txt」)。
+　　一括セットアップで「失敗」となったツールは、以下の手順で手動でインストールしてください。
+
+ -Python
+	公式サイト(https://www.python.org/downloads/release/python-31210/)の「Windows installer (64-bit)」(python-3.12.10-amd64.exe)をダウンロードして実行しインストール
+	→ 最初の画面で「Use admin privileges when installing py.exe」と「Add python.exe to PATH」に必ずチェックを入れてから「Install Now」
+	　（全ユーザー版としてインストールされます）
+	→ インストール後、コマンドプロンプトで python --version と入力し、バージョンが表示されることを確認
+	※ データベース(SQLite)は Python に組み込まれているため、別にインストールする必要はありません。
+
+ -VSCode
+	公式サイト(https://code.visualstudio.com/download)の最新版「System Installer(x64)」(VSCodeSetup-x64-バージョン.exe・全ユーザー版)をダウンロードして実行しインストール
+	→ 追加タスクの選択（★デフォルトから変更を推奨）:
+	• [ON] デスクトップ上にアイコンを作成する（お好みで）
+	• [ON] エクスプローラーのファイルコンテキストメニューに「Code で開く」アクションを追加する
+	• [ON] エクスプローラーのディレクトリコンテキストメニューに「Code で開く」アクションを追加する
+		 ※この2つをONにすると、フォルダやファイルを右クリックして一発でVSCodeで開けるようになる
+	• [ON] サポートされているファイルの種類のエディターとして、Codeを登録する
+	• [ON] PATHへの追加（再起動後に使用可能）
+		【重要】デフォルトでONになっていますが、絶対に外さないでください。コマンドプロンプトから code . と入力してVSCodeを開くために必須の設定
+	→ 他の設定は「次へ」で進める
+	★初期設定
+	• VSCodeが起動したら、画面左側にある四角いブロックが4つ並んだアイコン（Extensions / 拡張機能）をクリック
+	（１）pythonインストール
+	• 上部の検索バーに 「python」 と入力
+	• Microsoft公式が提供している 「Python」（作者名：Microsoft）の「インストール」
+	（２）日本語化
+	• 上部の検索バーに 「Japanese」 と入力
+	• 一番上に表示される 「Japanese Language Pack for Visual Studio Code」（Microsoft公式）の 「インストール」
+	• インストールが完了すると、画面右下に「Change Language and Restart」という青いボタンが表示されるので、それをクリック
+	• VSCodeが自動で再起動し、画面が日本語に切り替わる
+
+
+２．データベース(SQLite)
+	データベースを新しく作る作業はありません(完成済みのファイルを配置します)。
+	setup.bat が C:\fellowsapp フォルダを作り、「myappdb.sqlite3」(商品・注文・ユーザーのテーブルと初期データが入った 1 ファイル)を置きます。
+	手動で行う場合は、[①環境構築] > [商品関連テーブル] の myappdb.sqlite3 を C:\fellowsapp にコピーします。
