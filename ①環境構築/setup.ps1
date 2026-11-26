@@ -168,7 +168,7 @@ Invoke-Tool 'Python' {
     }
 } {
     $exe = Find-Installer $PythonExe
-    Invoke-Installer $exe '/quiet InstallAllUsers=1 PrependPath=1 Include_launcher=1 Include_test=0'
+    Invoke-Installer $exe "/quiet InstallAllUsers=1 PrependPath=1 Include_launcher=1 Include_test=0 /log `"$env:TEMP\python_install.log`""
 } | Out-Null
 
 # ---------- 2. VS Code ----------
